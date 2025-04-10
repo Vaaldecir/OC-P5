@@ -24,7 +24,7 @@ const leftArrow = document.querySelector(".arrow_left")
 const rightArrow = document.querySelector(".arrow_right")
 
 // Slider
-const slider = document.querySelectorAll(".banner")
+const slider = document.getElementById("banner")
 
 // Slides count
 const slidesLength = slides.length
@@ -38,10 +38,19 @@ let i = 0
 
 // When the Left Arrow is clicked
 leftArrow.addEventListener('click', () => {
-	console.log('Previous')
+	const img = banner.querySelector('.banner-img')
+	const tagLine = banner.querySelector('.tagline')
+	if(i === 0) {
+		i = slidesLength - 1
+	} else {
+		i--
+	}
+	img.src = "./assets/images/slideshow/" + slides[i].image
+	tagLine.innerHTML = slides[i].tagLine
 })
 
-// Whane the Right Arrow is clicled
+// When the Right Arrow is clicked
 rightArrow.addEventListener('click', () => {
+
 	console.log('Next')
 })
