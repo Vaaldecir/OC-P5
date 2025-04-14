@@ -51,6 +51,13 @@ leftArrow.addEventListener('click', () => {
 
 // When the Right Arrow is clicked
 rightArrow.addEventListener('click', () => {
-
-	console.log('Next')
+	const img = banner.querySelector('.banner-img')
+	const tagLine = banner.querySelector('.tagline')
+	if(i === slidesLength - 1) {
+		i = 0
+	} else {
+		i++
+	}
+	img.src = './assets/images/slideshow/' + slides[i].image
+	tagLine.innerHTML = slides[i].tagLine
 })
