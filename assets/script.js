@@ -61,3 +61,15 @@ rightArrow.addEventListener('click', () => {
 	img.src = './assets/images/slideshow/' + slides[i].image
 	tagLine.innerHTML = slides[i].tagLine
 })
+
+
+// Create as many dots as slides
+ for(let i = 0; i < slidesLength; i++) {
+// Create a dot
+const createDot = document.createElement('div')
+// Add a class to the new element
+createDot.classList.add('dot')
+// Add the new element into the right parent
+dots.appendChild(createDot)
+}
+
